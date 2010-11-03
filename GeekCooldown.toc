@@ -1,0 +1,10 @@
+## Interface: 40000
+## Author: Stalls
+## Version: 0.01
+## Title: |cffC495DDGeekCooldowns|r
+## Notes: Raid Cooldown Monitor
+## SavedVariables: GeekCooldown
+
+config\watchlist.lua
+CooldownMonitor.lua
+CooldownBars.lua
