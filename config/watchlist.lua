@@ -13,6 +13,6 @@ GeekWL = {
 	[20484] = 1800, -- Rebirth
 	[693] = 1800, -- Soulstone
 	[57934] = 30, -- Tricks of Trade
-	[42650] = 600, -- Army of the Dead
+	[42650] = 600, -- Army of the Dead 
 	[16190] = 180, -- Mana Tide Totem
 }
