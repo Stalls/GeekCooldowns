@@ -137,7 +137,6 @@ function timer:Update(elapsed)
 		self.frame:SetValue(currentBarPos)
 		
 		_G[self.frame:GetName().."Timer"]:SetText(stringFromTimer(self.timer))
-		--_G[self.frame:GetName().."Spark"]:SetPoint("CENTER", self.frame, "LEFT", self.frame:GetWidth() * currentBarPos, 2)
 	end
 end
 
@@ -145,7 +144,7 @@ function timer:Cancel()
 	if ( self == firstTimer ) then
 		firstTimer = self.next
 	else
-		node.prev.next = node.next
+		self.prev.next = self.next
 	end
 	
 	if ( self == lastTimer ) then

@@ -2,12 +2,13 @@ CooldownMonitor = {}
 local onSpellCast
 local spells = GeekWL
 GeekCD = { }
-mult = GetScreenWidth() * UIParent:GetScale() / select( GetCurrentResolution(), GetScreenResolutions() ):match( "%d+" )
+
+mult = 768/string.match(GetCVar("gxResolution"), "%d+x(%d+)")/tonumber(GetCVar("uiScale"))
 
 function GeekCD.Scale(x)
 	return mult*math.floor(x/mult+.5)
 end
-
+print(mult)
 local chatPrefix = "|cffff7d0a<|r|cffffd200GeekCooldown|r|cffff7d0a>|r "
 local function print(...)
 	DEFAULT_CHAT_FRAME:AddMessage(chatPrefix..string.join(" ", tostringall(...)), 0.41, 0.8, 0.94)
